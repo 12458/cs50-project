@@ -1,0 +1,6 @@
+picamera
+colour-science
+flask
+matplotlib
+numpy
+Pillow

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<style>
+
+</style>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+
+<body>
+
+    <div>
+        <img src="{{ spectrum }}">
+        <img src="{{ graph }}">
+
+
+
+        <form action="/rename/{{entry}}" method="post">
+            <label for="newname"> Rename Entry:</label><br />
+            <input type="text" name="newname" /><br />
+            <input type="submit" value="Rename" />
+        </form>
+
+        <button><a href="/delete/{{entry}}" />Delete</button>
+
+    </div>
+</body>
+
+</html>

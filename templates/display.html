@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        h1 {
+            color: red;
+        }
+
+        .text {
+            backdrop-filter: blur(3px);
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .places {
+            box-shadow: 0px 0px 5px 0px #9fb4f2;
+            background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+            background-color: #7892c2;
+            border-radius: 26px;
+            border: 1px solid #4e6096;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 19px;
+            padding: 15px 70px;
+            text-decoration: none;
+            text-shadow: 0px 0px 0px #283966;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            position: relative;
+            top: 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="text">
+        <h1> Records</h1>
+        <div class="record">
+            {% for line in data %}
+            <div class="record">
+                <div class="record-text">
+                    <div id="record-name">
+                        <button class="places"><a href="/{{line['DateTime']}}" />{{ line["DateTime"] }}</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
